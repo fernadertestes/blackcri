@@ -23,7 +23,7 @@ export function Rodape() {
           </p>
         </motion.div>
         <div className="mt-10 flex flex-col gap-4 border-t border-papel/15 pt-5 sm:flex-row sm:items-center sm:justify-between">
-          <p className="legenda text-areia">Rio de Janeiro</p>
+          <p className="legenda text-areia">Centro do Rio · 35 anos</p>
           <p className="legenda text-papel/50">© {new Date().getFullYear()} Black Crioulo</p>
           <a href="#inicio" className="link-ed legenda self-start text-papel sm:self-auto">
             <Magnetico>

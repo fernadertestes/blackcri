@@ -64,7 +64,7 @@ export function Galeria() {
         cy.set(e.clientY);
       }}
     >
-      <PalavraFundo alvo={secao} texto="Atitude" de="20%" para="-30%" className="contorno contorno-claro top-[40%] text-[36vw]" />
+      <PalavraFundo alvo={secao} texto="Corpo" de="20%" para="-30%" className="contorno contorno-claro top-[40%] text-[36vw]" />
 
       <div className="relative mx-auto max-w-[1600px] px-5 pb-28 pt-24 md:px-10 md:pb-44 md:pt-36">
         <Cabecalho n="Nº 04" rotulo={`Folha de contato · ${String(galeria.length).padStart(2, '0')} imagens`} escuro />
@@ -73,7 +73,7 @@ export function Galeria() {
             <Palavras texto="Galeria" />
           </h2>
           <p className="max-w-xs text-base leading-relaxed text-papel/70">
-            Treze fotografias e dois detalhes. Abra qualquer imagem para ver o quadro inteiro.
+            Abre qualquer foto e olha o corpo inteiro, sem pressa
           </p>
         </div>
 

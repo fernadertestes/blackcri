@@ -22,7 +22,7 @@ export function Sequencia() {
 }
 
 const descricao =
-  'Parede escura, luz de janela, rua ao sol. Três fotografias lidas como páginas de revista: a presença, o olhar, a cidade.';
+  'Sem camisa, peito aberto, rua do centro: três fotos pra você imaginar o pauzão entrando';
 
 function SequenciaFixa() {
   const secao = useTom<HTMLElement>('preto');
@@ -93,12 +93,12 @@ function SequenciaFixa() {
 
         {/* Cabeçalho e título da página atual */}
         <div className="pointer-events-none absolute inset-x-0 top-0 mx-auto max-w-[1600px] px-10 pt-24">
-          <Cabecalho n="Nº 02" rotulo={`Editorial · Ed. 01`} escuro />
+          <Cabecalho n="Nº 02" rotulo="Corpo · Ed. 01" escuro />
         </div>
         <div className="absolute bottom-[5vh] left-[4vw]">
-          <p className="legenda mb-3 text-areia">Editorial</p>
+          <p className="legenda mb-3 text-areia">Corpo</p>
           <h2 id="editorial-titulo" className="titulo relative h-[0.92em] overflow-hidden text-[clamp(4rem,9vw,9.5rem)] text-papel">
-            <span className="sr-only">Presença, Atitude, Detalhe</span>
+            <span className="sr-only">Tesão, Corpo, Centro</span>
             <AnimatePresence initial={false} mode="popLayout">
               <motion.span
                 key={pagina}
@@ -158,9 +158,9 @@ function SequenciaFluxo() {
   return (
     <section ref={secao} id="editorial" aria-labelledby="editorial-titulo" className="tom relative bg-preto">
       <div className="mx-auto max-w-[1600px] px-5 pb-24 pt-24 md:px-10 md:pb-36 md:pt-32">
-        <Cabecalho n="Nº 02" rotulo="Editorial · Ed. 01" escuro />
+        <Cabecalho n="Nº 02" rotulo="Corpo · Ed. 01" escuro />
         <h2 id="editorial-titulo" className="titulo mt-10 text-[clamp(3.6rem,17vw,10rem)] text-papel">
-          <Linhas linhas={['Presença']} />
+          <Linhas linhas={['Tesão']} />
         </h2>
         <p className="mt-6 max-w-sm text-base leading-relaxed text-papel/75">{descricao}</p>
 

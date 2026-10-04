@@ -13,10 +13,16 @@ function canais(): Canal[] {
   const email = contato.email.trim();
   const zap = contato.whatsapp.replace(/\D/g, '');
   const insta = contato.instagram.trim().replace(/^@/, '');
+  const x = contato.x.trim();
   const ag = contato.agencia;
   if (email) lista.push({ rotulo: 'E-mail', valor: email, href: `mailto:${email}` });
   if (zap) lista.push({ rotulo: 'WhatsApp', valor: `+${zap}`, href: `https://wa.me/${zap}`, externo: true });
   if (insta) lista.push({ rotulo: 'Instagram', valor: `@${insta}`, href: `https://instagram.com/${insta}`, externo: true });
+  if (x) lista.push({ rotulo: 'X', valor: '@blackcriolo_ofc', href: x, externo: true });
+  for (const link of contato.links) {
+    const href = link.href.trim();
+    if (href) lista.push({ rotulo: link.rotulo, valor: link.valor, href, externo: true });
+  }
   if (ag.nome.trim() && ag.url.trim()) lista.push({ rotulo: 'Agência', valor: ag.nome.trim(), href: ag.url.trim(), externo: true });
   return lista;
 }
@@ -41,7 +47,7 @@ export function Contato() {
 
       <div className="relative mx-auto grid max-w-[1600px] grid-cols-12 gap-x-5 gap-y-12 px-5 py-20 md:px-10 lg:min-h-[100svh] lg:content-center lg:py-28">
         <div className="col-span-12 lg:col-span-5 lg:col-start-8">
-          <Cabecalho n="Nº 05" rotulo="Contato" />
+          <Cabecalho n="Nº 05" rotulo="Chama" />
         </div>
 
         <div className="col-span-12 lg:col-span-5 lg:col-start-8">

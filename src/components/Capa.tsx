@@ -78,12 +78,12 @@ export function Capa() {
       {/* Créditos editoriais */}
       <motion.div style={{ y: yCreditos }} className="absolute inset-x-0 top-24 mx-auto hidden max-w-[1600px] justify-between px-10 md:flex">
         <motion.p className="legenda text-papel/80" initial={ini({ opacity: 0, x: -10 })} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1.6, duration: 0.9, ease }}>
-          Ed. 01 — Presença
+          Ed. 01 — Tesão
         </motion.p>
         <motion.p className="legenda text-right text-papel/80" initial={ini({ opacity: 0, x: 10 })} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1.7, duration: 0.9, ease }}>
-          Ensaio fotográfico
+          Garoto de programa
           <br />
-          Rio de Janeiro
+          Centro do Rio
         </motion.p>
       </motion.div>
 
@@ -132,11 +132,11 @@ export function Capa() {
           >
             <a href="#editorial" className="link-ed legenda text-papel">
               <Magnetico>
-                Explorar o editorial <span aria-hidden>↓</span>
+                Ver o corpo <span aria-hidden>↓</span>
               </Magnetico>
             </a>
             <a href="#contato" className="link-ed legenda text-papel">
-              <Magnetico>Contato</Magnetico>
+              <Magnetico>Me chama</Magnetico>
             </a>
           </motion.div>
         </div>

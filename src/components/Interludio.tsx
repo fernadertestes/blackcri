@@ -25,11 +25,11 @@ export function Interludio() {
         />
       </motion.div>
       <div aria-hidden className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#0b0a09_0%,rgba(11,10,9,.7)_45%,rgba(11,10,9,.1)_100%)]" />
-      <PalavraFundo alvo={secao} texto="Noite" de="30%" para="-10%" className="contorno contorno-claro -z-10 bottom-[-6vw] right-0 text-[30vw]" />
+      <PalavraFundo alvo={secao} texto="Grosso" de="30%" para="-10%" className="contorno contorno-claro -z-10 bottom-[-6vw] right-0 text-[30vw]" />
 
       <div className="mx-auto w-full max-w-[1600px] px-5 py-32 md:px-10">
         <motion.p ref={rotulo.ref} style={{ y: rotulo.y }} className="legenda mb-10 text-areia">
-          Interlúdio — Noite
+          Noite no centro
         </motion.p>
         <p className="titulo max-w-[12ch] text-[clamp(3.8rem,13vw,15rem)] text-papel">
           <Palavras texto={textos.interludio} intervalo={0.16} amount={0.6} destaque={(_, i, n) => (i === n - 1 ? 'text-cobre' : undefined)} />

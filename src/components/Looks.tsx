@@ -18,7 +18,7 @@ export function Looks() {
   return cinema ? <LooksFixo /> : <LooksFaixa />;
 }
 
-const intro = 'Cinco looks, a mesma presença. Do terno ao jeans, a roupa muda; o jeito fica.';
+const intro = 'A roupa muda e o corpo fica: magro, definido, pauzão de 24 cm bem grosso';
 
 function LooksFixo() {
   const secao = useTom<HTMLElement>('areia');

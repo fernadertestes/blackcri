@@ -6,16 +6,15 @@ import { FotoParallax, Linhas, useMidia, useParallaxY } from '../lib/movimento';
 
 /**
  * A cidade — assinatura: respiro em dois tempos.
- * Beira-mar com "O Rio no olhar.", terraço ao pôr do sol com "A atitude no corpo."
  * Cada painel: foto que desliza e se aproxima; frase por linha sobre a base escurecida.
  */
 export function Cidade() {
-  const [l1, l2] = textos.frase.split('. ').map((t, i, a) => (i < a.length - 1 ? `${t}.` : t));
+  const [l1, l2] = textos.cidade;
   return (
     <section aria-label="A cidade" className="relative bg-preto">
-      <h2 className="sr-only">{textos.frase}</h2>
-      <Painel foto={fotoPraia} linha={l1} legenda="Rio de Janeiro · beira-mar" posicao="object-[78%_0%] md:object-[70%_0%]" origem="70% 30%" />
-      <Painel foto={fotoTerraco} linha={l2} legenda="Terraço · pôr do sol" posicao="object-[22%_0%] md:object-[30%_0%]" origem="30% 30%" cobre direita />
+      <h2 className="sr-only">{textos.cidade.join(' ')}</h2>
+      <Painel foto={fotoPraia} linha={l1} legenda="Rio de Janeiro · Centro" posicao="object-[78%_0%] md:object-[70%_0%]" origem="70% 30%" />
+      <Painel foto={fotoTerraco} linha={l2} legenda="Versátil ativo · 24 cm" posicao="object-[22%_0%] md:object-[30%_0%]" origem="30% 30%" cobre direita />
     </section>
   );
 }

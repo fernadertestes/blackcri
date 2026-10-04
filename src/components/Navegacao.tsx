@@ -3,11 +3,11 @@ import { AnimatePresence, motion, useMotionValueEvent, useScroll, useSpring } fr
 import { ease, easeIO, useMidia } from '../lib/movimento';
 
 const itens = [
-  { href: '#manifesto', rotulo: 'Manifesto', n: '01' },
-  { href: '#editorial', rotulo: 'Editorial', n: '02' },
+  { href: '#manifesto', rotulo: 'Sobre', n: '01' },
+  { href: '#editorial', rotulo: 'Corpo', n: '02' },
   { href: '#looks', rotulo: 'Looks', n: '03' },
-  { href: '#galeria', rotulo: 'Galeria', n: '04' },
-  { href: '#contato', rotulo: 'Contato', n: '05' },
+  { href: '#galeria', rotulo: 'Fotos', n: '04' },
+  { href: '#contato', rotulo: 'Chama', n: '05' },
 ];
 
 /** Atraso da navegação na coreografia da capa. */
@@ -173,7 +173,7 @@ export function Navegacao() {
               exit={{ opacity: 0 }}
               transition={{ delay: 0.7, duration: 0.6, ease }}
             >
-              Rio de Janeiro · Personagem &amp; modelo
+              Centro do Rio · garoto de programa · 35 anos
             </motion.p>
           </motion.div>
         )}

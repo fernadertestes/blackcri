@@ -19,10 +19,10 @@ export function Manifesto() {
 
   return (
     <section ref={secao} id="manifesto" aria-labelledby="manifesto-titulo" className="tom papel sobre-claro relative overflow-hidden">
-      <PalavraFundo alvo={secao} texto="Presença" de="10%" para="-35%" className="contorno contorno-escuro top-[34%] text-[38vw]" />
+      <PalavraFundo alvo={secao} texto="Tesão" de="10%" para="-35%" className="contorno contorno-escuro top-[34%] text-[38vw]" />
 
       <div className="relative mx-auto max-w-[1600px] px-5 pb-24 pt-24 md:px-10 md:pb-40 md:pt-36">
-        <Cabecalho n="Nº 01" rotulo="Manifesto" />
+        <Cabecalho n="Nº 01" rotulo="Sobre" />
 
         <div className="mt-14 grid grid-cols-12 gap-x-5 gap-y-12 md:mt-24">
           <h2 id="manifesto-titulo" className="titulo col-span-12 text-[clamp(3.2rem,9.5vw,10rem)] !leading-[0.92] lg:col-span-10">
@@ -48,7 +48,7 @@ export function Manifesto() {
             </Revelar>
             <Revelar atraso={0.25} className="mt-10 flex items-center gap-4">
               <span className="h-px w-12 bg-carvao/40" aria-hidden />
-              <span className="legenda text-areia-escura">Apresentação do personagem</span>
+              <span className="legenda text-areia-escura">Versátil ativo · 35 anos · magro</span>
             </Revelar>
           </div>
         </div>

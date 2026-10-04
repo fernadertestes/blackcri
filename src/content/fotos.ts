@@ -75,7 +75,7 @@ export const fotoEstudio: Foto = {
   srcSet: set(estudio720, 720, estudio1440, 1440),
   largura: 1672,
   altura: 941,
-  alt: 'Black Crioulo sem camisa, encostado em uma parede escura de textura envelhecida, com corrente prateada grossa, calça preta e pulseira de cobre, olhando para a câmera.',
+  alt: 'Black Crioulo sem camisa, encostado em uma parede escura de textura envelhecida, com corrente prateada grossa, calça preta e pulseira de cobre, olhando para a câmera',
 };
 
 export const fotoRetrato: Foto = {
@@ -83,7 +83,7 @@ export const fotoRetrato: Foto = {
   srcSet: set(retrato720, 720, retrato1122, 1122),
   largura: 1122,
   altura: 1402,
-  alt: 'Retrato de Black Crioulo de camisa preta aberta e corrente prateada, encostado em uma parede clara com sombra de janela, olhar sério para a câmera.',
+  alt: 'Retrato de Black Crioulo de camisa preta aberta e corrente prateada, encostado em uma parede clara com sombra de janela, olhar sério para a câmera',
 };
 
 export const fotoCorredor: Foto = {
@@ -91,7 +91,7 @@ export const fotoCorredor: Foto = {
   srcSet: set(corredor720, 720, corredor1122, 1122),
   largura: 1122,
   altura: 1402,
-  alt: 'Black Crioulo sem camisa no batente de uma porta, braço apoiado no alto, com corredor de luz laranja ao fundo, corrente prateada e calça preta.',
+  alt: 'Black Crioulo sem camisa no batente de uma porta, braço apoiado no alto, com corredor de luz laranja ao fundo, corrente prateada e calça preta',
 };
 
 export const fotoRua: Foto = {
@@ -99,7 +99,7 @@ export const fotoRua: Foto = {
   srcSet: set(rua720, 720, rua1122, 1122),
   largura: 1122,
   altura: 1402,
-  alt: 'Black Crioulo de regata clara e calça preta, encostado em um muro antigo ao sol numa rua de pedras, com corrente prateada e pulseira de cobre.',
+  alt: 'Black Crioulo de regata clara e calça preta, encostado em um muro antigo ao sol numa rua de pedras, com corrente prateada e pulseira de cobre',
 };
 
 export const fotoRetratoPB: Foto = {
@@ -107,7 +107,7 @@ export const fotoRetratoPB: Foto = {
   srcSet: set(pb720, 720, pb1122, 1122),
   largura: 1122,
   altura: 1402,
-  alt: 'Retrato em preto e branco de Black Crioulo de regata preta e corrente prateada grossa, fundo escuro, olhar direto e sério.',
+  alt: 'Retrato em preto e branco de Black Crioulo de regata preta e corrente prateada grossa, fundo escuro, olhar direto e sério',
 };
 
 export const fotoPraia: Foto = {
@@ -115,7 +115,7 @@ export const fotoPraia: Foto = {
   srcSet: set(praia720, 720, praia1440, 1440),
   largura: 1672,
   altura: 941,
-  alt: 'Black Crioulo caminhando no calçadão à beira-mar ao fim de tarde, camisa de linho clara aberta, corrente prateada e calça preta, com o mar e os morros ao fundo.',
+  alt: 'Black Crioulo caminhando no calçadão à beira-mar ao fim de tarde, camisa de linho clara aberta, corrente prateada e calça preta, com o mar e os morros ao fundo',
 };
 
 export const fotoJanela: Foto = {
@@ -123,7 +123,7 @@ export const fotoJanela: Foto = {
   srcSet: set(janela720, 720, janela1440, 1440),
   largura: 1672,
   altura: 941,
-  alt: 'Black Crioulo sem camisa ao lado de uma janela, olhando para fora, com a luz do sol desenhando sombras numa parede clara.',
+  alt: 'Black Crioulo sem camisa ao lado de uma janela, olhando para fora, com a luz do sol desenhando sombras numa parede clara',
 };
 
 export const fotoCadeira: Foto = {
@@ -131,7 +131,7 @@ export const fotoCadeira: Foto = {
   srcSet: set(cadeira720, 720, cadeira1122, 1122),
   largura: 1122,
   altura: 1402,
-  alt: 'Black Crioulo sentado numa cadeira de madeira, terno preto aberto sobre o peito, corrente prateada e pulseira de cobre, fundo bege.',
+  alt: 'Black Crioulo sentado numa cadeira de madeira, terno preto aberto sobre o peito, corrente prateada e pulseira de cobre, fundo bege',
 };
 
 export const fotoCamisaBranca: Foto = {
@@ -139,7 +139,7 @@ export const fotoCamisaBranca: Foto = {
   srcSet: set(camisa_branca720, 720, camisa_branca1440, 1440),
   largura: 1672,
   altura: 941,
-  alt: 'Black Crioulo de camisa branca aberta e calça preta, dobrando a manga, encostado numa parede bege com sombras de janela.',
+  alt: 'Black Crioulo de camisa branca aberta e calça preta, dobrando a manga, encostado numa parede bege com sombras de janela',
 };
 
 export const fotoLuzAzul: Foto = {
@@ -147,7 +147,7 @@ export const fotoLuzAzul: Foto = {
   srcSet: set(luz_azul720, 720, luz_azul1122, 1122),
   largura: 1122,
   altura: 1402,
-  alt: 'Retrato de Black Crioulo de regata preta e corrente prateada, rosto iluminado por luz azul lateral sobre fundo escuro.',
+  alt: 'Retrato de Black Crioulo de regata preta e corrente prateada, rosto iluminado por luz azul lateral sobre fundo escuro',
 };
 
 export const fotoTerraco: Foto = {
@@ -155,7 +155,7 @@ export const fotoTerraco: Foto = {
   srcSet: set(terraco720, 720, terraco1440, 1440),
   largura: 1672,
   altura: 941,
-  alt: 'Black Crioulo de camisa preta aberta, apoiado no muro de um terraço, com a cidade e os morros ao pôr do sol atrás dele.',
+  alt: 'Black Crioulo de camisa preta aberta, apoiado no muro de um terraço, com a cidade e os morros ao pôr do sol atrás dele',
 };
 
 export const fotoJeans: Foto = {
@@ -163,7 +163,7 @@ export const fotoJeans: Foto = {
   srcSet: set(jeans720, 720, jeans1122, 1122),
   largura: 1122,
   altura: 1402,
-  alt: 'Black Crioulo sentado num banco de metal, jaqueta e calça jeans escuras, peito à mostra, corrente prateada e botas pretas, olhando para o lado.',
+  alt: 'Black Crioulo sentado num banco de metal, jaqueta e calça jeans escuras, peito à mostra, corrente prateada e botas pretas, olhando para o lado',
 };
 
 export const fotoNoite: Foto = {
@@ -171,7 +171,7 @@ export const fotoNoite: Foto = {
   srcSet: set(noite720, 720, noite1122, 1122),
   largura: 1122,
   altura: 1402,
-  alt: 'À noite, Black Crioulo de regata preta e braços cruzados, encostado numa porta de aço, com a calçada molhada e as luzes da rua ao fundo.',
+  alt: 'À noite, Black Crioulo de regata preta e braços cruzados, encostado numa porta de aço, com a calçada molhada e as luzes da rua ao fundo',
 };
 
 /* ---------- Looks (seção Guarda-roupa) ---------- */
@@ -179,8 +179,8 @@ export const fotoNoite: Foto = {
 export type Look = Foto & { n: string; nome: string; peca: string };
 
 const looksBrutos: Array<Partial<Look>> = [
-  { ...fotoCadeira, n: '01', nome: 'Terno', peca: 'Terno preto aberto · corrente' },
-  { ...fotoJeans, n: '02', nome: 'Jeans', peca: 'Jaqueta e calça jeans · botas pretas' },
+  { ...fotoCadeira, n: '01', nome: 'Terno', peca: 'Terno aberto · peito à mostra' },
+  { ...fotoJeans, n: '02', nome: 'Jeans', peca: 'Jeans aberto · corpo magro' },
   {
     src: lookCB752,
     srcSet: set(lookCB720, 720, lookCB752, 752),
@@ -189,7 +189,7 @@ const looksBrutos: Array<Partial<Look>> = [
     alt: fotoCamisaBranca.alt,
     n: '03',
     nome: 'Camisa branca',
-    peca: 'Camisa branca aberta · calça preta',
+    peca: 'Camisa aberta · peito à mostra',
   },
   {
     src: lookLP752,
@@ -199,9 +199,9 @@ const looksBrutos: Array<Partial<Look>> = [
     alt: fotoTerraco.alt,
     n: '04',
     nome: 'Linho preto',
-    peca: 'Camisa preta de linho · pôr do sol',
+    peca: 'Linho aberto · centro ao pôr do sol',
   },
-  { ...fotoLuzAzul, n: '05', nome: 'Regata', peca: 'Regata preta · luz azul' },
+  { ...fotoLuzAzul, n: '05', nome: 'Regata', peca: 'Regata justa · corpo magro' },
 ];
 export const looks = looksBrutos.filter(valida<Look>);
 
@@ -213,7 +213,7 @@ export const fotoPulso: Foto = {
   src: pulso360,
   largura: 360,
   altura: 384,
-  alt: 'Detalhe da mão e do pulso com uma pulseira fina de cobre, ao lado da calça preta, numa rua ensolarada.',
+  alt: 'Detalhe da mão e do pulso com uma pulseira fina de cobre, ao lado da calça preta, numa rua ensolarada',
 };
 
 export const fotoInterludio: Foto = { ...fotoNoite, alt: '' }; // decorativa: o texto é o conteúdo
@@ -222,7 +222,7 @@ const corrente: Foto = {
   src: corrente600,
   largura: 600,
   altura: 640,
-  alt: 'Detalhe da corrente prateada de elos grossos sobre o peito, entre as lapelas da camisa preta.',
+  alt: 'Detalhe da corrente prateada de elos grossos sobre o peito, entre as lapelas da camisa preta',
 };
 
 const editorialBruto: Array<Partial<FotoEditorial>> = [
@@ -232,32 +232,32 @@ const editorialBruto: Array<Partial<FotoEditorial>> = [
     largura: 1422,
     altura: 871,
     alt: fotoEstudio.alt,
-    legenda: '01 / PRESENÇA',
-    titulo: 'Presença',
+    legenda: '01 / TESÃO',
+    titulo: 'Tesão',
     formato: 'amplo',
   },
-  { ...fotoRetrato, legenda: '02 / ATITUDE', titulo: 'Atitude', formato: 'vertical' },
-  { ...fotoRua, legenda: '03 / RUA', titulo: 'Rua', formato: 'vertical' },
+  { ...fotoRetrato, legenda: '02 / CORPO', titulo: 'Corpo', formato: 'vertical' },
+  { ...fotoRua, legenda: '03 / CENTRO', titulo: 'Centro', formato: 'vertical' },
 ];
 export const editorial = editorialBruto.filter(valida<FotoEditorial>);
 
 // A ordem segue o ritmo da composição: ampla, retrato, retrato, ampla...
 const galeriaBruta: Array<Partial<FotoGaleria>> = [
-  { ...fotoEstudio, legenda: 'Estúdio · parede escura', formato: 'amplo' },
-  { ...fotoCorredor, legenda: 'Corredor · luz laranja', formato: 'retrato' },
-  { ...fotoRetratoPB, legenda: 'Retrato · preto e branco', formato: 'retrato' },
-  { ...fotoPraia, legenda: 'Rio · fim de tarde', formato: 'amplo' },
-  { ...fotoRetrato, legenda: 'Retrato · camisa preta', formato: 'retrato' },
-  { ...fotoCadeira, legenda: 'Estúdio · terno', formato: 'retrato' },
-  { ...fotoJanela, legenda: 'Janela · luz do sol', formato: 'amplo' },
-  { ...fotoRua, legenda: 'Rua · muro antigo', formato: 'retrato' },
-  { ...corrente, legenda: 'Detalhe · corrente', formato: 'detalhe' },
-  { ...fotoPulso, legenda: 'Detalhe · cobre no pulso', formato: 'detalhe' },
-  { ...fotoCamisaBranca, legenda: 'Parede · camisa branca', formato: 'amplo' },
-  { ...fotoLuzAzul, legenda: 'Retrato · luz azul', formato: 'retrato' },
-  { ...fotoJeans, legenda: 'Estúdio · jeans', formato: 'retrato' },
-  { ...fotoTerraco, legenda: 'Terraço · pôr do sol', formato: 'amplo' },
-  { ...fotoNoite, legenda: 'Noite · porta de aço', formato: 'retrato' },
+  { ...fotoEstudio, legenda: 'Sem camisa · parede escura', formato: 'amplo' },
+  { ...fotoCorredor, legenda: 'Corpo à mostra · luz quente', formato: 'retrato' },
+  { ...fotoRetratoPB, legenda: 'Olhar de quem come', formato: 'retrato' },
+  { ...fotoPraia, legenda: 'Centro do Rio · fim de tarde', formato: 'amplo' },
+  { ...fotoRetrato, legenda: 'Camisa aberta · peito', formato: 'retrato' },
+  { ...fotoCadeira, legenda: 'Terno aberto · pronto', formato: 'retrato' },
+  { ...fotoJanela, legenda: 'Sem camisa · luz no corpo', formato: 'amplo' },
+  { ...fotoRua, legenda: 'Na rua do centro', formato: 'retrato' },
+  { ...corrente, legenda: 'Detalhe · peito', formato: 'detalhe' },
+  { ...fotoPulso, legenda: 'Detalhe · pulso', formato: 'detalhe' },
+  { ...fotoCamisaBranca, legenda: 'Camisa aberta · magro', formato: 'amplo' },
+  { ...fotoLuzAzul, legenda: 'Regata justa · corpo', formato: 'retrato' },
+  { ...fotoJeans, legenda: 'Jeans aberto · magro', formato: 'retrato' },
+  { ...fotoTerraco, legenda: 'Terraço · centro ao pôr do sol', formato: 'amplo' },
+  { ...fotoNoite, legenda: 'Noite · pronto pra te foder', formato: 'retrato' },
   // Novas fotos entram aqui:
   // { src: nova, largura: 1200, altura: 1600, alt: '...', legenda: 'Noite · escada', formato: 'retrato' },
 ];
