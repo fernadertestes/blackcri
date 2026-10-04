@@ -26,20 +26,36 @@ export const contato = {
 
 export const textos = {
   nome: ['BLACK', 'CRIOULO'] as const,
-  linhaCapa: 'Centro do Rio · 35 anos · versátil ativo',
-  frase: 'Magro, pauzão de 24 cm bem grosso',
-  cidade: ['Centro do Rio', 'Te como inteiro'] as const,
+  linhaCapa: 'Copacabana · acompanhante e massoterapeuta',
+  frase: 'Só a cabecinha comigo não funciona',
+  cidade: ['Copacabana', 'Colocar tudo'] as const,
   manifesto: {
-    titulo: 'Te fodo inteiro',
+    titulo: 'Socar fundo',
     texto:
-      'Black Crioulo, 35 anos, magro, versátil ativo, do Centro do Rio, com um pauzão de 24 cm bem grosso, duro, pesado e pronto pra entrar fundo até você pedir mais, e com Privacy pra ver tudo antes',
-    destaque: ['Pauzão', 'grosso'] as const,
+      'Só a cabecinha comigo não funciona, gosto de socar fundo e colocar tudo, e se aguenta uma pegada com conceito, está eu aqui',
+    destaque: ['24 cm', 'grossão'] as const,
+    chamada: 'Ativo · 1,80 m · 75 kg',
+    itens: [
+      '1,80 m / 75 kg',
+      'Mega dotado, 24 cm, pesado e grossão — quer comprovar?',
+      'Ativo',
+      'Macho e super discreto',
+      'Bem safado e carinhoso',
+      'Realizo suas fantasias, S&M: me conte e combinamos',
+      'Massagens profissionais relaxantes, tântrica e a 4 mãos',
+      'Atendo casais e mulheres',
+      'Packs de fotos e vídeos, ou vídeo chamada',
+      'Local discreto e confortável, ou na sua casa ou motel',
+      'Viagens, pernoite e uma boa companhia',
+      '24h',
+    ],
   },
-  interludio: 'Grosso até o talo',
+  interludio: 'Já teve a melhor companhia?',
   contato: {
-    titulo: 'Quer foder?',
-    texto: 'Centro do Rio, versátil ativo, 35 anos, magro, pauzão de 24 cm bem grosso, com Privacy pra ver antes de marcar',
+    titulo: 'Então me liga',
+    texto:
+      'Rua Santa Clara, Copacabana, local discreto e confortável, ou na sua casa ou motel, viagens, pernoite e atendimento 24h — me liga e permita-se ao extraordinário',
     emBreve: 'Me chama no X',
-    escopo: 'Privacy · OnlyFans · OnNow Play · Garoto com Local · X',
+    escopo: 'Casais e mulheres · massagem tântrica · vídeo chamada',
   },
 };

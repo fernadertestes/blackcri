@@ -173,7 +173,7 @@ export function Navegacao() {
               exit={{ opacity: 0 }}
               transition={{ delay: 0.7, duration: 0.6, ease }}
             >
-              Centro do Rio · garoto de programa · 35 anos
+              Copacabana · acompanhante · 24h
             </motion.p>
           </motion.div>
         )}

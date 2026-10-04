@@ -73,7 +73,7 @@ export function Galeria() {
             <Palavras texto="Galeria" />
           </h2>
           <p className="max-w-xs text-base leading-relaxed text-papel/70">
-            Abre qualquer foto e olha o corpo inteiro, sem pressa
+            Packs de fotos e vídeos, ou se curte uma vídeo chamada
           </p>
         </div>
 

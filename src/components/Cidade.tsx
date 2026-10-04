@@ -13,8 +13,8 @@ export function Cidade() {
   return (
     <section aria-label="A cidade" className="relative bg-preto">
       <h2 className="sr-only">{textos.cidade.join(' ')}</h2>
-      <Painel foto={fotoPraia} linha={l1} legenda="Rio de Janeiro · Centro" posicao="object-[78%_0%] md:object-[70%_0%]" origem="70% 30%" />
-      <Painel foto={fotoTerraco} linha={l2} legenda="Versátil ativo · 24 cm" posicao="object-[22%_0%] md:object-[30%_0%]" origem="30% 30%" cobre direita />
+      <Painel foto={fotoPraia} linha={l1} legenda="Rua Santa Clara · Copacabana" posicao="object-[78%_0%] md:object-[70%_0%]" origem="70% 30%" />
+      <Painel foto={fotoTerraco} linha={l2} legenda="Ativo · 24 cm, pesado e grossão" posicao="object-[22%_0%] md:object-[30%_0%]" origem="30% 30%" cobre direita />
     </section>
   );
 }

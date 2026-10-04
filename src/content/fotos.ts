@@ -180,7 +180,7 @@ export type Look = Foto & { n: string; nome: string; peca: string };
 
 const looksBrutos: Array<Partial<Look>> = [
   { ...fotoCadeira, n: '01', nome: 'Terno', peca: 'Terno aberto · peito à mostra' },
-  { ...fotoJeans, n: '02', nome: 'Jeans', peca: 'Jeans aberto · corpo magro' },
+  { ...fotoJeans, n: '02', nome: 'Jeans', peca: 'Jeans aberto · 1,80 m' },
   {
     src: lookCB752,
     srcSet: set(lookCB720, 720, lookCB752, 752),
@@ -199,9 +199,9 @@ const looksBrutos: Array<Partial<Look>> = [
     alt: fotoTerraco.alt,
     n: '04',
     nome: 'Linho preto',
-    peca: 'Linho aberto · centro ao pôr do sol',
+    peca: 'Linho aberto · Copacabana',
   },
-  { ...fotoLuzAzul, n: '05', nome: 'Regata', peca: 'Regata justa · corpo magro' },
+  { ...fotoLuzAzul, n: '05', nome: 'Regata', peca: 'Regata justa · 75 kg' },
 ];
 export const looks = looksBrutos.filter(valida<Look>);
 
@@ -237,7 +237,7 @@ const editorialBruto: Array<Partial<FotoEditorial>> = [
     formato: 'amplo',
   },
   { ...fotoRetrato, legenda: '02 / CORPO', titulo: 'Corpo', formato: 'vertical' },
-  { ...fotoRua, legenda: '03 / CENTRO', titulo: 'Centro', formato: 'vertical' },
+  { ...fotoRua, legenda: '03 / COPA', titulo: 'Copa', formato: 'vertical' },
 ];
 export const editorial = editorialBruto.filter(valida<FotoEditorial>);
 
@@ -246,18 +246,18 @@ const galeriaBruta: Array<Partial<FotoGaleria>> = [
   { ...fotoEstudio, legenda: 'Sem camisa · parede escura', formato: 'amplo' },
   { ...fotoCorredor, legenda: 'Corpo à mostra · luz quente', formato: 'retrato' },
   { ...fotoRetratoPB, legenda: 'Olhar de quem come', formato: 'retrato' },
-  { ...fotoPraia, legenda: 'Centro do Rio · fim de tarde', formato: 'amplo' },
+  { ...fotoPraia, legenda: 'Copacabana · fim de tarde', formato: 'amplo' },
   { ...fotoRetrato, legenda: 'Camisa aberta · peito', formato: 'retrato' },
   { ...fotoCadeira, legenda: 'Terno aberto · pronto', formato: 'retrato' },
   { ...fotoJanela, legenda: 'Sem camisa · luz no corpo', formato: 'amplo' },
-  { ...fotoRua, legenda: 'Na rua do centro', formato: 'retrato' },
+  { ...fotoRua, legenda: 'Rua Santa Clara', formato: 'retrato' },
   { ...corrente, legenda: 'Detalhe · peito', formato: 'detalhe' },
   { ...fotoPulso, legenda: 'Detalhe · pulso', formato: 'detalhe' },
-  { ...fotoCamisaBranca, legenda: 'Camisa aberta · magro', formato: 'amplo' },
+  { ...fotoCamisaBranca, legenda: 'Camisa aberta · Copacabana', formato: 'amplo' },
   { ...fotoLuzAzul, legenda: 'Regata justa · corpo', formato: 'retrato' },
-  { ...fotoJeans, legenda: 'Jeans aberto · magro', formato: 'retrato' },
-  { ...fotoTerraco, legenda: 'Terraço · centro ao pôr do sol', formato: 'amplo' },
-  { ...fotoNoite, legenda: 'Noite · pronto pra te foder', formato: 'retrato' },
+  { ...fotoJeans, legenda: 'Jeans aberto · ativo', formato: 'retrato' },
+  { ...fotoTerraco, legenda: 'Terraço · Copacabana', formato: 'amplo' },
+  { ...fotoNoite, legenda: 'Noite · socar fundo', formato: 'retrato' },
   // Novas fotos entram aqui:
   // { src: nova, largura: 1200, altura: 1600, alt: '...', legenda: 'Noite · escada', formato: 'retrato' },
 ];

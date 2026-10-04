@@ -18,7 +18,7 @@ export function Looks() {
   return cinema ? <LooksFixo /> : <LooksFaixa />;
 }
 
-const intro = 'A roupa muda e o corpo fica: magro, definido, pauzão de 24 cm bem grosso';
+const intro = '1,80 m, 75 kg, mega dotado de 24 cm, pesado e grossão';
 
 function LooksFixo() {
   const secao = useTom<HTMLElement>('areia');

@@ -22,7 +22,7 @@ export function Sequencia() {
 }
 
 const descricao =
-  'Sem camisa, peito aberto, rua do centro: três fotos pra você imaginar o pauzão entrando';
+  'Só a cabecinha comigo não funciona: gosto de socar fundo e colocar tudo';
 
 function SequenciaFixa() {
   const secao = useTom<HTMLElement>('preto');
@@ -98,7 +98,7 @@ function SequenciaFixa() {
         <div className="absolute bottom-[5vh] left-[4vw]">
           <p className="legenda mb-3 text-areia">Corpo</p>
           <h2 id="editorial-titulo" className="titulo relative h-[0.92em] overflow-hidden text-[clamp(4rem,9vw,9.5rem)] text-papel">
-            <span className="sr-only">Tesão, Corpo, Centro</span>
+            <span className="sr-only">Tesão, Corpo, Copa</span>
             <AnimatePresence initial={false} mode="popLayout">
               <motion.span
                 key={pagina}

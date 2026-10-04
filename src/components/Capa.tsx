@@ -45,7 +45,7 @@ export function Capa() {
         transition={{ delay: 0.3, duration: 2, ease }}
         className="titulo contorno contorno-claro pointer-events-none absolute -left-[2vw] top-[8vh] hidden text-[30vw] leading-none lg:block"
       >
-        RIO
+        COPA
       </motion.span>
 
       {/* Fotografia — entrada (externa) + aproximação na rolagem (interna, origem no topo para manter o rosto) */}
@@ -78,12 +78,12 @@ export function Capa() {
       {/* Créditos editoriais */}
       <motion.div style={{ y: yCreditos }} className="absolute inset-x-0 top-24 mx-auto hidden max-w-[1600px] justify-between px-10 md:flex">
         <motion.p className="legenda text-papel/80" initial={ini({ opacity: 0, x: -10 })} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1.6, duration: 0.9, ease }}>
-          Ed. 01 — Tesão
+          Acompanhante
         </motion.p>
         <motion.p className="legenda text-right text-papel/80" initial={ini({ opacity: 0, x: 10 })} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1.7, duration: 0.9, ease }}>
-          Garoto de programa
+          Massoterapeuta
           <br />
-          Centro do Rio
+          Rua Santa Clara
         </motion.p>
       </motion.div>
 

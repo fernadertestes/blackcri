@@ -19,7 +19,7 @@ export function Manifesto() {
 
   return (
     <section ref={secao} id="manifesto" aria-labelledby="manifesto-titulo" className="tom papel sobre-claro relative overflow-hidden">
-      <PalavraFundo alvo={secao} texto="Tesão" de="10%" para="-35%" className="contorno contorno-escuro top-[34%] text-[38vw]" />
+      <PalavraFundo alvo={secao} texto="Ativo" de="10%" para="-35%" className="contorno contorno-escuro top-[34%] text-[38vw]" />
 
       <div className="relative mx-auto max-w-[1600px] px-5 pb-24 pt-24 md:px-10 md:pb-40 md:pt-36">
         <Cabecalho n="Nº 01" rotulo="Sobre" />
@@ -34,7 +34,7 @@ export function Manifesto() {
               <FotoParallax foto={fotoPulso} sizes="(min-width: 768px) 25vw, 58vw" intensidade={5} className="aspect-[15/16]" />
             </MascaraFoto>
             <motion.figcaption ref={legenda.ref} style={{ y: legenda.y }} className="legenda mt-3 flex justify-between gap-3 whitespace-nowrap text-areia-escura">
-              <span>Cobre no pulso</span>
+              <span>1,80 m · 75 kg</span>
               <span>Ed. 01</span>
             </motion.figcaption>
           </figure>
@@ -48,10 +48,20 @@ export function Manifesto() {
             </Revelar>
             <Revelar atraso={0.25} className="mt-10 flex items-center gap-4">
               <span className="h-px w-12 bg-carvao/40" aria-hidden />
-              <span className="legenda text-areia-escura">Versátil ativo · 35 anos · magro</span>
+              <span className="legenda text-areia-escura">{m.chamada}</span>
             </Revelar>
           </div>
         </div>
+
+        <Revelar atraso={0.15} className="mt-16 md:mt-24">
+          <ul className="grid gap-x-10 gap-y-4 md:grid-cols-2">
+            {m.itens.map((item) => (
+              <li key={item} className="border-t border-carvao/15 pt-3 text-base leading-snug text-carvao/85 md:text-lg">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </Revelar>
 
         <motion.div ref={destaque} style={{ scale: escala, x }} className="mt-24 origin-right md:mt-40">
           <p className="titulo text-right text-[clamp(3.6rem,15vw,17rem)]">
