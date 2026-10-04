@@ -41,7 +41,7 @@ export function Contato() {
 
       <div className="relative mx-auto grid max-w-[1600px] grid-cols-12 gap-x-5 gap-y-12 px-5 py-20 md:px-10 lg:min-h-[100svh] lg:content-center lg:py-28">
         <div className="col-span-12 lg:col-span-5 lg:col-start-8">
-          <Cabecalho n="Nº 04" rotulo="Contato" />
+          <Cabecalho n="Nº 05" rotulo="Contato" />
         </div>
 
         <div className="col-span-12 lg:col-span-5 lg:col-start-8">

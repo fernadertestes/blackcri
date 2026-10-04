@@ -4,6 +4,7 @@ import { Capa } from './components/Capa';
 import { Faixa } from './components/Faixa';
 import { Manifesto } from './components/Manifesto';
 import { Sequencia } from './components/Sequencia';
+import { Looks } from './components/Looks';
 import { Galeria } from './components/Galeria';
 import { Cidade } from './components/Cidade';
 import { Interludio } from './components/Interludio';
@@ -22,7 +23,9 @@ export default function App() {
           <Manifesto />
           <Costura de="papel" para="preto" altura="34vh" />
           <Sequencia />
-          <Costura de="preto" para="carvao" altura="18vh" />
+          <Costura de="preto" para="areia" altura="30vh" />
+          <Looks />
+          <Costura de="areia" para="carvao" altura="30vh" />
           <Galeria />
           <Costura de="carvao" para="preto" altura="18vh" />
           <Cidade />

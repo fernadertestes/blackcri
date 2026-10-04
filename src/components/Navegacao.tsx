@@ -5,8 +5,9 @@ import { ease, easeIO, useMidia } from '../lib/movimento';
 const itens = [
   { href: '#manifesto', rotulo: 'Manifesto', n: '01' },
   { href: '#editorial', rotulo: 'Editorial', n: '02' },
-  { href: '#galeria', rotulo: 'Galeria', n: '03' },
-  { href: '#contato', rotulo: 'Contato', n: '04' },
+  { href: '#looks', rotulo: 'Looks', n: '03' },
+  { href: '#galeria', rotulo: 'Galeria', n: '04' },
+  { href: '#contato', rotulo: 'Contato', n: '05' },
 ];
 
 /** Atraso da navegação na coreografia da capa. */
@@ -160,7 +161,7 @@ export function Navegacao() {
                     transition={{ delay: 0.32 + k * 0.08, duration: 0.8, ease }}
                   >
                     <span className="legenda text-areia">{i.n}</span>
-                    <span className="titulo text-[15vw] leading-[0.95]">{i.rotulo}</span>
+                    <span className="titulo text-[13vw] leading-[0.95]">{i.rotulo}</span>
                   </motion.a>
                 </li>
               ))}

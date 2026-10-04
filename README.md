@@ -45,7 +45,14 @@ As fotografias originais ficam em `fotos/originais/`:
 - `ensaio_retrato-pb.png` (retrato em preto e branco — galeria)
 - `ensaio_praia-fim-de-tarde.png` (horizontal — seção "A cidade" e galeria)
 - `ensaio_janela-luz.png` (horizontal — fundo do contato e galeria)
-- `ensaio_cadeira-terno.png` (sentado de terno — galeria)
+- `ensaio_cadeira-terno.png` (sentado de terno — looks e galeria)
+- `ensaio_camisa-branca.png` (horizontal — looks, recorte vertical, e galeria)
+- `ensaio_retrato-luz-azul.png` (retrato — looks e galeria)
+- `ensaio_terraco-por-do-sol.png` (horizontal — "A cidade", looks e galeria)
+- `ensaio_jeans-banco.png` (jeans — looks e galeria)
+- `ensaio_noite-porta-de-aco.png` (noite — fundo do interlúdio e galeria)
+
+Os looks da seção Guarda-roupa ficam em `looks`, em `src/content/fotos.ts`.
 
 As duas fotos usadas na primeira versão estão guardadas em `fotos/arquivo/` e não entram no site.
 
@@ -75,6 +82,8 @@ As duas fotos usadas na primeira versão estão guardadas em `fotos/arquivo/` e 
 | `src/components/Capa.tsx` | Coreografia de abertura (tempos no comentário do topo) e profundidade na rolagem |
 | `src/components/Sequencia.tsx` | Sequência fixa de 3 páginas no desktop; fluxo vertical no celular e com movimento reduzido |
 | `src/components/Galeria.tsx` | Folha de contato, cursor "VER FOTO", ampliação com transição compartilhada (Esc, fundo, botão, ← →) |
+| `src/components/Looks.tsx` | Guarda-roupa: travelling horizontal fixo no desktop; faixa com rolagem lateral no celular |
+| `src/components/Cidade.tsx` | Dois painéis da cidade (beira-mar e terraço) com a frase da capa |
 | `src/lib/tons.tsx` | Costuras em degradê entre areia, papel, carvão e preto |
 
 Para ajustar a duração da sequência fixa, mude `h-[340vh]` em `SequenciaFixa`. Os intervalos de cada página estão documentados no topo do arquivo.

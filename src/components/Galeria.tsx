@@ -67,13 +67,13 @@ export function Galeria() {
       <PalavraFundo alvo={secao} texto="Atitude" de="20%" para="-30%" className="contorno contorno-claro top-[40%] text-[36vw]" />
 
       <div className="relative mx-auto max-w-[1600px] px-5 pb-28 pt-24 md:px-10 md:pb-44 md:pt-36">
-        <Cabecalho n="Nº 03" rotulo={`Folha de contato · ${String(galeria.length).padStart(2, '0')} imagens`} escuro />
+        <Cabecalho n="Nº 04" rotulo={`Folha de contato · ${String(galeria.length).padStart(2, '0')} imagens`} escuro />
         <div className="mt-10 flex flex-col gap-6 md:mt-16 md:flex-row md:items-end md:justify-between">
           <h2 id="galeria-titulo" className="titulo text-[clamp(3.6rem,13vw,13rem)] text-papel">
             <Palavras texto="Galeria" />
           </h2>
           <p className="max-w-xs text-base leading-relaxed text-papel/70">
-            Oito fotografias e dois detalhes. Abra qualquer imagem para ver o quadro inteiro.
+            Treze fotografias e dois detalhes. Abra qualquer imagem para ver o quadro inteiro.
           </p>
         </div>
 

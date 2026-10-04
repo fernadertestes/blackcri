@@ -1,7 +1,7 @@
 /**
  * ============================================================
  *  FOTOGRAFIAS
- *  Originais em /fotos/originais (8 fotos). Os arquivos de
+ *  Originais em /fotos/originais (13 fotos). Os arquivos de
  *  src/assets/fotos são versões web e recortes dessas originais,
  *  gerados por `npm run fotos` (ver scripts/recortes.config.mjs).
  *
@@ -27,6 +27,20 @@ import janela720 from '../assets/fotos/janela-720.webp';
 import janela1440 from '../assets/fotos/janela-1440.webp';
 import cadeira720 from '../assets/fotos/cadeira-720.webp';
 import cadeira1122 from '../assets/fotos/cadeira-1122.webp';
+import camisa_branca720 from '../assets/fotos/camisa-branca-720.webp';
+import camisa_branca1440 from '../assets/fotos/camisa-branca-1440.webp';
+import luz_azul720 from '../assets/fotos/luz-azul-720.webp';
+import luz_azul1122 from '../assets/fotos/luz-azul-1122.webp';
+import terraco720 from '../assets/fotos/terraco-720.webp';
+import terraco1440 from '../assets/fotos/terraco-1440.webp';
+import jeans720 from '../assets/fotos/jeans-720.webp';
+import jeans1122 from '../assets/fotos/jeans-1122.webp';
+import noite720 from '../assets/fotos/noite-720.webp';
+import noite1122 from '../assets/fotos/noite-1122.webp';
+import lookCB720 from '../assets/fotos/look_camisa-branca-720.webp';
+import lookCB752 from '../assets/fotos/look_camisa-branca-752.webp';
+import lookLP720 from '../assets/fotos/look_linho-preto-720.webp';
+import lookLP752 from '../assets/fotos/look_linho-preto-752.webp';
 import seq720 from '../assets/fotos/seq-01_estudio-720.webp';
 import seq1422 from '../assets/fotos/seq-01_estudio-1422.webp';
 import corrente600 from '../assets/fotos/detalhe_corrente-600.webp';
@@ -120,6 +134,77 @@ export const fotoCadeira: Foto = {
   alt: 'Black Crioulo sentado numa cadeira de madeira, terno preto aberto sobre o peito, corrente prateada e pulseira de cobre, fundo bege.',
 };
 
+export const fotoCamisaBranca: Foto = {
+  src: camisa_branca1440,
+  srcSet: set(camisa_branca720, 720, camisa_branca1440, 1440),
+  largura: 1672,
+  altura: 941,
+  alt: 'Black Crioulo de camisa branca aberta e calça preta, dobrando a manga, encostado numa parede bege com sombras de janela.',
+};
+
+export const fotoLuzAzul: Foto = {
+  src: luz_azul1122,
+  srcSet: set(luz_azul720, 720, luz_azul1122, 1122),
+  largura: 1122,
+  altura: 1402,
+  alt: 'Retrato de Black Crioulo de regata preta e corrente prateada, rosto iluminado por luz azul lateral sobre fundo escuro.',
+};
+
+export const fotoTerraco: Foto = {
+  src: terraco1440,
+  srcSet: set(terraco720, 720, terraco1440, 1440),
+  largura: 1672,
+  altura: 941,
+  alt: 'Black Crioulo de camisa preta aberta, apoiado no muro de um terraço, com a cidade e os morros ao pôr do sol atrás dele.',
+};
+
+export const fotoJeans: Foto = {
+  src: jeans1122,
+  srcSet: set(jeans720, 720, jeans1122, 1122),
+  largura: 1122,
+  altura: 1402,
+  alt: 'Black Crioulo sentado num banco de metal, jaqueta e calça jeans escuras, peito à mostra, corrente prateada e botas pretas, olhando para o lado.',
+};
+
+export const fotoNoite: Foto = {
+  src: noite1122,
+  srcSet: set(noite720, 720, noite1122, 1122),
+  largura: 1122,
+  altura: 1402,
+  alt: 'À noite, Black Crioulo de regata preta e braços cruzados, encostado numa porta de aço, com a calçada molhada e as luzes da rua ao fundo.',
+};
+
+/* ---------- Looks (seção Guarda-roupa) ---------- */
+
+export type Look = Foto & { n: string; nome: string; peca: string };
+
+const looksBrutos: Array<Partial<Look>> = [
+  { ...fotoCadeira, n: '01', nome: 'Terno', peca: 'Terno preto aberto · corrente' },
+  { ...fotoJeans, n: '02', nome: 'Jeans', peca: 'Jaqueta e calça jeans · botas pretas' },
+  {
+    src: lookCB752,
+    srcSet: set(lookCB720, 720, lookCB752, 752),
+    largura: 752,
+    altura: 941,
+    alt: fotoCamisaBranca.alt,
+    n: '03',
+    nome: 'Camisa branca',
+    peca: 'Camisa branca aberta · calça preta',
+  },
+  {
+    src: lookLP752,
+    srcSet: set(lookLP720, 720, lookLP752, 752),
+    largura: 752,
+    altura: 941,
+    alt: fotoTerraco.alt,
+    n: '04',
+    nome: 'Linho preto',
+    peca: 'Camisa preta de linho · pôr do sol',
+  },
+  { ...fotoLuzAzul, n: '05', nome: 'Regata', peca: 'Regata preta · luz azul' },
+];
+export const looks = looksBrutos.filter(valida<Look>);
+
 /* ---------- Usos por seção ---------- */
 
 export const fotoCapa = fotoEstudio;
@@ -131,7 +216,7 @@ export const fotoPulso: Foto = {
   alt: 'Detalhe da mão e do pulso com uma pulseira fina de cobre, ao lado da calça preta, numa rua ensolarada.',
 };
 
-export const fotoInterludio: Foto = { ...fotoCorredor, alt: '' }; // decorativa: o texto é o conteúdo
+export const fotoInterludio: Foto = { ...fotoNoite, alt: '' }; // decorativa: o texto é o conteúdo
 
 const corrente: Foto = {
   src: corrente600,
@@ -156,6 +241,7 @@ const editorialBruto: Array<Partial<FotoEditorial>> = [
 ];
 export const editorial = editorialBruto.filter(valida<FotoEditorial>);
 
+// A ordem segue o ritmo da composição: ampla, retrato, retrato, ampla...
 const galeriaBruta: Array<Partial<FotoGaleria>> = [
   { ...fotoEstudio, legenda: 'Estúdio · parede escura', formato: 'amplo' },
   { ...fotoCorredor, legenda: 'Corredor · luz laranja', formato: 'retrato' },
@@ -167,6 +253,11 @@ const galeriaBruta: Array<Partial<FotoGaleria>> = [
   { ...fotoRua, legenda: 'Rua · muro antigo', formato: 'retrato' },
   { ...corrente, legenda: 'Detalhe · corrente', formato: 'detalhe' },
   { ...fotoPulso, legenda: 'Detalhe · cobre no pulso', formato: 'detalhe' },
+  { ...fotoCamisaBranca, legenda: 'Parede · camisa branca', formato: 'amplo' },
+  { ...fotoLuzAzul, legenda: 'Retrato · luz azul', formato: 'retrato' },
+  { ...fotoJeans, legenda: 'Estúdio · jeans', formato: 'retrato' },
+  { ...fotoTerraco, legenda: 'Terraço · pôr do sol', formato: 'amplo' },
+  { ...fotoNoite, legenda: 'Noite · porta de aço', formato: 'retrato' },
   // Novas fotos entram aqui:
   // { src: nova, largura: 1200, altura: 1600, alt: '...', legenda: 'Noite · escada', formato: 'retrato' },
 ];

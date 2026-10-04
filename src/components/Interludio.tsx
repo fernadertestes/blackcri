@@ -10,18 +10,18 @@ export function Interludio() {
   const { leve } = useMidia();
   const { scrollYProgress: p } = useScroll({ target: secao, offset: ['start end', 'end start'] });
   const escala = useTransform(p, [0, 1], leve ? [1, 1] : [1.14, 1]);
-  const luz = useTransform(p, [0.15, 0.5, 0.9], [0.25, 0.55, 0.3]);
+  const luz = useTransform(p, [0.15, 0.5, 0.9], [0.35, 0.85, 0.45]);
   const rotulo = useParallaxY<HTMLParagraphElement>(30);
 
   return (
     <section ref={secao} aria-label="Interlúdio" className="tom relative isolate flex min-h-[100svh] items-center overflow-hidden bg-preto">
-      <motion.div className="absolute inset-0 -z-10" style={{ scale: escala, opacity: luz }}>
+      <motion.div className="absolute inset-0 -z-10 lg:left-[40%]" style={{ scale: escala, opacity: luz }}>
         <FotoParallax
           foto={fotoInterludio}
           sizes="100vw"
           intensidade={9}
           className="h-full w-full"
-          imgClassName="object-[50%_22%] [filter:saturate(.95)_brightness(.8)]"
+          imgClassName="object-[50%_12%] [filter:saturate(.95)_brightness(.8)]"
         />
       </motion.div>
       <div aria-hidden className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#0b0a09_0%,rgba(11,10,9,.7)_45%,rgba(11,10,9,.1)_100%)]" />
