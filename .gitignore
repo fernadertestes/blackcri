@@ -26,3 +26,7 @@ dist-ssr
 # Cache e config local
 .vite
 .claude/settings.local.json
+
+# Vídeos originais (acima do limite de 100 MB do GitHub)
+*.MOV
+fundo-original.mp4

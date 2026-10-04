@@ -9,7 +9,7 @@ import { useTom } from '../lib/tons';
 export function Manifesto() {
   const m = textos.manifesto;
   const secao = useTom<HTMLElement>('papel');
-  const { leve } = useMidia();
+  const { leve, reduzido } = useMidia();
   const legenda = useParallaxY<HTMLElement>(14);
 
   const destaque = useRef<HTMLDivElement>(null);
@@ -63,8 +63,23 @@ export function Manifesto() {
           </ul>
         </Revelar>
 
-        <motion.div ref={destaque} style={{ scale: escala, x }} className="mt-24 origin-right md:mt-40">
-          <p className="titulo text-right text-[clamp(3.6rem,15vw,17rem)]">
+        <motion.div ref={destaque} style={{ scale: escala, x }} className="relative mt-24 origin-right md:mt-40">
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-[46%] overflow-hidden md:w-[42%]" aria-hidden>
+            <video
+              className="h-full w-full object-cover"
+              src="/fundo.mp4?v=1080"
+              autoPlay={!reduzido}
+              muted
+              loop
+              playsInline
+              preload="auto"
+              ref={(el) => {
+                if (el) el.muted = true;
+              }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent from-55% to-papel" />
+          </div>
+          <p className="titulo relative z-10 text-right text-[clamp(3.6rem,15vw,17rem)]">
             <Linhas linhas={[m.destaque[0], <span className="text-cobre-escuro">{m.destaque[1]}</span>]} intervalo={0.16} />
           </p>
         </motion.div>
