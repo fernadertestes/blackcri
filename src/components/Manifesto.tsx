@@ -63,26 +63,32 @@ export function Manifesto() {
           </ul>
         </Revelar>
 
-        <motion.div ref={destaque} style={{ scale: escala, x }} className="relative mt-24 origin-right md:mt-40">
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-[46%] overflow-hidden md:w-[42%]" aria-hidden>
-            <video
-              className="h-full w-full object-cover"
-              src="/fundo.mp4?v=1080"
-              autoPlay={!reduzido}
-              muted
-              loop
-              playsInline
-              preload="auto"
-              ref={(el) => {
-                if (el) el.muted = true;
-              }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent from-55% to-papel" />
-          </div>
-          <p className="titulo relative z-10 text-right text-[clamp(3.6rem,15vw,17rem)]">
-            <Linhas linhas={[m.destaque[0], <span className="text-cobre-escuro">{m.destaque[1]}</span>]} intervalo={0.16} />
-          </p>
-        </motion.div>
+      </div>
+
+      {/* Destaque em tela cheia: o vídeo ocupa a janela inteira e se dissolve no papel em cima e embaixo. */}
+      <div ref={destaque} className="relative flex min-h-[100svh] items-center overflow-hidden bg-carvao">
+        <video
+          aria-hidden
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+          src="/fundo.mp4?v=30s"
+          autoPlay={!reduzido}
+          muted
+          loop
+          playsInline
+          preload="auto"
+          ref={(el) => {
+            if (el) el.muted = true;
+          }}
+        />
+        <div aria-hidden className="pointer-events-none absolute inset-0 bg-carvao/45" />
+        <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[16%] bg-gradient-to-b from-papel to-transparent" />
+        <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-[16%] bg-gradient-to-t from-papel to-transparent" />
+        <motion.p
+          style={{ scale: escala, x }}
+          className="titulo relative z-10 mx-auto w-full max-w-[1600px] origin-right px-5 text-right text-[clamp(3.6rem,15vw,17rem)] text-papel md:px-10"
+        >
+          <Linhas linhas={[m.destaque[0], <span className="text-cobre">{m.destaque[1]}</span>]} intervalo={0.16} />
+        </motion.p>
       </div>
     </section>
   );
