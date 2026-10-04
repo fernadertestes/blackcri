@@ -37,10 +37,16 @@ import jeans720 from '../assets/fotos/jeans-720.webp';
 import jeans1122 from '../assets/fotos/jeans-1122.webp';
 import noite720 from '../assets/fotos/noite-720.webp';
 import noite1122 from '../assets/fotos/noite-1122.webp';
-import lookCB720 from '../assets/fotos/look_camisa-branca-720.webp';
-import lookCB752 from '../assets/fotos/look_camisa-branca-752.webp';
-import lookLP720 from '../assets/fotos/look_linho-preto-720.webp';
-import lookLP752 from '../assets/fotos/look_linho-preto-752.webp';
+import motivo01_720 from '../assets/fotos/motivo-01-720.webp';
+import motivo01_1024 from '../assets/fotos/motivo-01-1024.webp';
+import motivo02_720 from '../assets/fotos/motivo-02-720.webp';
+import motivo02_1024 from '../assets/fotos/motivo-02-1024.webp';
+import motivo03_720 from '../assets/fotos/motivo-03-720.webp';
+import motivo03_1024 from '../assets/fotos/motivo-03-1024.webp';
+import motivo04_720 from '../assets/fotos/motivo-04-720.webp';
+import motivo04_1024 from '../assets/fotos/motivo-04-1024.webp';
+import motivo05_720 from '../assets/fotos/motivo-05-720.webp';
+import motivo05_1024 from '../assets/fotos/motivo-05-1024.webp';
 import seq720 from '../assets/fotos/seq-01_estudio-720.webp';
 import seq1422 from '../assets/fotos/seq-01_estudio-1422.webp';
 import corrente600 from '../assets/fotos/detalhe_corrente-600.webp';
@@ -176,32 +182,23 @@ export const fotoNoite: Foto = {
 
 /* ---------- Looks (seção Guarda-roupa) ---------- */
 
-export type Look = Foto & { n: string; nome: string; peca: string };
+export type Look = Foto & { n: string };
+
+const motivo = (n: string, a: string, b: string, alt: string): Look => ({
+  n,
+  src: b,
+  srcSet: set(a, 720, b, 1024),
+  largura: 1024,
+  altura: 768,
+  alt,
+});
 
 const looksBrutos: Array<Partial<Look>> = [
-  { ...fotoCadeira, n: '01', nome: 'Terno', peca: 'Terno aberto · peito à mostra' },
-  { ...fotoJeans, n: '02', nome: 'Jeans', peca: 'Jeans aberto · 1,80 m' },
-  {
-    src: lookCB752,
-    srcSet: set(lookCB720, 720, lookCB752, 752),
-    largura: 752,
-    altura: 941,
-    alt: fotoCamisaBranca.alt,
-    n: '03',
-    nome: 'Camisa branca',
-    peca: 'Camisa aberta · peito à mostra',
-  },
-  {
-    src: lookLP752,
-    srcSet: set(lookLP720, 720, lookLP752, 752),
-    largura: 752,
-    altura: 941,
-    alt: fotoTerraco.alt,
-    n: '04',
-    nome: 'Linho preto',
-    peca: 'Linho aberto · Copacabana',
-  },
-  { ...fotoLuzAzul, n: '05', nome: 'Regata', peca: 'Regata justa · 75 kg' },
+  motivo('01', motivo01_720, motivo01_1024, 'Black Crioulo mostra o pau de 24 cm, grosso, ao lado de um frasco'),
+  motivo('02', motivo02_720, motivo02_1024, 'Black Crioulo sem camisa, puxando a calça branca'),
+  motivo('03', motivo03_720, motivo03_1024, 'Black Crioulo sem camisa, calça branca baixa, visto de cima'),
+  motivo('04', motivo04_720, motivo04_1024, 'Black Crioulo de short preto, abdômen à mostra'),
+  motivo('05', motivo05_720, motivo05_1024, 'Black Crioulo de short verde, mão no volume'),
 ];
 export const looks = looksBrutos.filter(valida<Look>);
 

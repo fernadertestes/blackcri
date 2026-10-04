@@ -12,7 +12,7 @@
  */
 export const contato = {
   email: '',          // ex.: 'contato@seudominio.com'
-  whatsapp: '',       // só números com DDI e DDD, ex.: '5521999999999'
+  whatsapp: '5511968980531',
   instagram: '',      // só o usuário, sem @, ex.: 'blackcrioulo'
   x: 'https://x.com/blackcriolo_ofc?s=11',
   agencia: { nome: '', url: '' }, // ex.: { nome: 'Agência X', url: 'https://...' }

@@ -11,12 +11,10 @@ type Canal = { rotulo: string; valor: string; href: string; externo?: boolean };
 function canais(): Canal[] {
   const lista: Canal[] = [];
   const email = contato.email.trim();
-  const zap = contato.whatsapp.replace(/\D/g, '');
   const insta = contato.instagram.trim().replace(/^@/, '');
   const x = contato.x.trim();
   const ag = contato.agencia;
   if (email) lista.push({ rotulo: 'E-mail', valor: email, href: `mailto:${email}` });
-  if (zap) lista.push({ rotulo: 'WhatsApp', valor: `+${zap}`, href: `https://wa.me/${zap}`, externo: true });
   if (insta) lista.push({ rotulo: 'Instagram', valor: `@${insta}`, href: `https://instagram.com/${insta}`, externo: true });
   if (x) lista.push({ rotulo: 'X', valor: '@blackcriolo_ofc', href: x, externo: true });
   for (const link of contato.links) {
@@ -31,6 +29,8 @@ function canais(): Canal[] {
 export function Contato() {
   const c = textos.contato;
   const lista = canais();
+  const zap = contato.whatsapp.replace(/\D/g, '');
+  const zapHref = zap ? `https://wa.me/${zap}` : '';
   const secao = useTom<HTMLElement>('papel');
   const { reduzido } = useMidia();
   const [l1, l2] = splitTitulo(c.titulo);
@@ -42,7 +42,7 @@ export function Contato() {
         <MascaraFoto className="h-full w-full">
           <FotoParallax foto={fotoJanela} sizes="100vw" intensidade={5} className="aspect-[16/10] w-full lg:aspect-auto lg:h-full" imgClassName="object-left" />
         </MascaraFoto>
-        <div aria-hidden className="pointer-events-none absolute inset-0 hidden bg-gradient-to-l from-papel/80 via-papel/35 via-45% to-transparent to-70% lg:block" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 hidden bg-gradient-to-l from-papel from-35% via-papel/95 via-52% to-transparent to-78% lg:block" />
       </div>
 
       <div className="relative mx-auto grid max-w-[1600px] grid-cols-12 gap-x-5 gap-y-12 px-5 py-20 md:px-10 lg:min-h-[100svh] lg:content-center lg:py-28">
@@ -62,6 +62,21 @@ export function Contato() {
           </Revelar>
 
           <div className="mt-14">
+            {zapHref && (
+              <a
+                href={zapHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mb-8 flex items-center justify-between gap-4 bg-carvao px-5 py-4 text-papel transition-colors hover:bg-cobre-escuro"
+              >
+                <span className="legenda">WhatsApp</span>
+                <span className="text-lg md:text-xl">
+                  {formatarWhatsapp(zap)}
+                  <span aria-hidden className="ml-3 inline-block">→</span>
+                  <span className="sr-only"> (abre o WhatsApp para adicionar)</span>
+                </span>
+              </a>
+            )}
             {lista.length > 0 ? (
               <motion.ul
                 className="max-w-lg border-t border-carvao/20"
@@ -82,7 +97,7 @@ export function Contato() {
                       {...(k.externo ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                       className="group flex items-baseline justify-between gap-6 py-5 transition-colors hover:text-cobre-escuro"
                     >
-                      <span className="legenda text-areia-escura">{k.rotulo}</span>
+                      <span className="legenda text-carvao">{k.rotulo}</span>
                       <Magnetico forca={4}>
                         <span className="text-lg md:text-xl">
                           {k.valor}
@@ -118,6 +133,13 @@ export function Contato() {
       </div>
     </section>
   );
+}
+
+/** 5511968980531 → (11) 96898-0531 */
+function formatarWhatsapp(digitos: string) {
+  const local = digitos.startsWith('55') ? digitos.slice(2) : digitos;
+  if (local.length === 11) return `(${local.slice(0, 2)}) ${local.slice(2, 7)}-${local.slice(7)}`;
+  return `+${digitos}`;
 }
 
 /** Divide o título em duas linhas equilibradas para a máscara. */

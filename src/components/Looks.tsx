@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import { motion, useScroll, useSpring, useTransform, type MotionValue } from 'motion/react';
 import { looks, type Look } from '../content/fotos';
-import { Palavras, ease, useMidia } from '../lib/movimento';
+import { Linhas, ease, useMidia } from '../lib/movimento';
 import { useTom } from '../lib/tons';
 import { Cabecalho } from './Manifesto';
 
@@ -19,6 +19,7 @@ export function Looks() {
 }
 
 const intro = '1,80 m, 75 kg, mega dotado de 24 cm, pesado e grossão';
+const tituloLooks = ['5 motivos', 'pra sair', 'comigo'] as const;
 
 function LooksFixo() {
   const secao = useTom<HTMLElement>('areia');
@@ -55,14 +56,14 @@ function LooksFixo() {
     >
       <div className="sticky top-0 flex h-[100svh] flex-col justify-center overflow-hidden">
         <div className="mx-auto w-full max-w-[1600px] px-10 pt-16">
-          <Cabecalho n="Nº 03" rotulo={`Guarda-roupa · ${String(looks.length).padStart(2, '0')} looks`} />
+          <Cabecalho n="Nº 03" rotulo="5 motivos pra sair comigo" />
         </div>
 
         <motion.div ref={trilho} className="flex w-max items-end gap-[3vw] px-10 pb-8 pt-6" style={{ x }}>
           {/* painel de abertura */}
-          <div className="flex h-[56vh] w-[30vw] shrink-0 flex-col justify-end pr-[2vw]">
-            <h2 id="looks-titulo" className="titulo text-[clamp(4rem,8vw,9rem)]">
-              <Palavras texto="Guarda-roupa" />
+          <div className="flex h-[56vh] w-[min(42vw,26rem)] shrink-0 flex-col justify-end pr-[2vw]">
+            <h2 id="looks-titulo" className="titulo text-[clamp(2.7rem,4.4vw,4.6rem)]">
+              <Linhas linhas={tituloLooks} />
             </h2>
             <p className="mt-6 max-w-sm text-lg leading-relaxed text-carvao/80">{intro}</p>
             <p className="legenda mt-8 flex items-center gap-3 text-carvao/70">
@@ -99,28 +100,24 @@ function CartaoLook({ look, i, progresso }: { look: Look; i: number; progresso: 
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 1, ease }}
     >
-      <div className={`relative aspect-[4/5] overflow-hidden bg-carvao ${alto ? 'h-[56vh]' : 'h-[46vh]'}`}>
+      <div className={`relative aspect-[4/3] overflow-hidden bg-carvao ${alto ? 'h-[48vh]' : 'h-[40vh]'}`}>
         <motion.div className="absolute inset-y-0 -left-[6%] -right-[6%]" style={{ x: xFoto }}>
           <img
             src={look.src}
             srcSet={look.srcSet}
-            sizes="45vh"
+            sizes="64vh"
             width={look.largura}
             height={look.altura}
             alt={look.alt}
             loading="lazy"
             decoding="async"
-            className="h-full w-full object-cover object-top transition-transform duration-[900ms] ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-[1.04]"
+            className="h-full w-full object-cover object-center transition-transform duration-[900ms] ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-[1.04]"
           />
         </motion.div>
         <span aria-hidden className="titulo absolute left-4 top-3 text-[clamp(3rem,6vh,4.5rem)] leading-none text-papel mix-blend-difference">
           {look.n}
         </span>
       </div>
-      <figcaption className="mt-3 flex flex-col gap-1.5 border-t border-carvao/25 pt-3">
-        <span className="titulo text-2xl">{look.nome}</span>
-        <span className="legenda text-carvao/70">{look.peca}</span>
-      </figcaption>
     </motion.figure>
   );
 }
@@ -130,9 +127,9 @@ function LooksFaixa() {
   return (
     <section ref={secao} id="looks" aria-labelledby="looks-titulo" className="sobre-claro relative bg-areia py-20 text-carvao md:py-28">
       <div className="mx-auto max-w-[1600px] px-5 md:px-10">
-        <Cabecalho n="Nº 03" rotulo={`Guarda-roupa · ${String(looks.length).padStart(2, '0')} looks`} />
-        <h2 id="looks-titulo" className="titulo mt-8 text-[clamp(3.4rem,15vw,9rem)]">
-          <Palavras texto="Guarda-roupa" />
+        <Cabecalho n="Nº 03" rotulo="5 motivos pra sair comigo" />
+        <h2 id="looks-titulo" className="titulo mt-8 text-[clamp(2.8rem,12vw,5.5rem)]">
+          <Linhas linhas={tituloLooks} />
         </h2>
         <p className="mt-5 max-w-sm text-base leading-relaxed text-carvao/80">{intro}</p>
       </div>
@@ -144,14 +141,10 @@ function LooksFaixa() {
       >
         {looks.map((l) => (
           <li key={l.n} className="w-[72vw] max-w-[360px] shrink-0 snap-start">
-            <div className="relative aspect-[4/5] overflow-hidden bg-carvao">
-              <img src={l.src} srcSet={l.srcSet} sizes="72vw" width={l.largura} height={l.altura} alt={l.alt} loading="lazy" decoding="async" className="h-full w-full object-cover object-top" />
+            <div className="relative aspect-[4/3] overflow-hidden bg-carvao">
+              <img src={l.src} srcSet={l.srcSet} sizes="72vw" width={l.largura} height={l.altura} alt={l.alt} loading="lazy" decoding="async" className="h-full w-full object-cover object-center" />
               <span aria-hidden className="titulo absolute left-3 top-2 text-5xl leading-none text-papel mix-blend-difference">{l.n}</span>
             </div>
-            <p className="mt-3 flex flex-col gap-1 border-t border-carvao/25 pt-3">
-              <span className="titulo text-xl">{l.nome}</span>
-              <span className="legenda text-carvao/70">{l.peca}</span>
-            </p>
           </li>
         ))}
       </ul>
